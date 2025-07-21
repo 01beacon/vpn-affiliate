@@ -1,3 +1,5 @@
+export const runtime = 'nodejs';
+
 export async function POST(req) {
   const { prompt } = await req.json();
   const apiKey = process.env.OPENAI_API_KEY;
