@@ -4,6 +4,42 @@ import TopVPNAccordion from "@/components/TopVPNAccordion";
 export default function Home() {
   return (
     <main className="bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-900 dark:to-gray-800 min-h-screen text-gray-800 dark:text-gray-100">
+      {/* Sticky top CTA only on desktop */}
+      <div className="hidden md:flex sticky top-0 z-50 bg-gradient-to-r from-blue-700 to-blue-800 text-white py-3 px-6 shadow-lg justify-between items-center">
+        <span className="font-semibold text-lg">Jämför Sveriges bästa VPN-erbjudande</span>
+        <a
+          href="https://go.nordvpn.net/SH9uk"
+          target="_blank"
+          rel="noopener sponsored"
+          className="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold px-5 py-2 rounded-xl shadow transition ml-6"
+        >
+          Säkra NordVPN-erbjudandet
+        </a>
+      </div>
+      {/* Jumpy Sticky CTA for mobile */}
+      {/* <div className="fixed bottom-2 left-0 w-full z-50 flex md:hidden justify-center">
+        <a
+          href="https://go.nordvpn.net/SH9uk"
+          target="_blank"
+          rel="noopener sponsored"
+          className="bg-blue-700 hover:bg-blue-900 text-white font-bold px-6 py-3 rounded-full shadow-xl transition animate-bounce"
+        >
+          🚀 Säkra NordVPN-erbjudandet nu
+        </a>
+      </div> */}
+      {/* Sticky bottom CTA */}
+      <div className="fixed bottom-0 left-0 w-full z-50 md:hidden bg-gradient-to-r from-blue-700 to-blue-800 text-white p-3 shadow-lg flex justify-between items-center">
+        <span className="font-semibold text-lg">Säkra NordVPN-erbjudandet</span>
+        <a
+          href="https://go.nordvpn.net/SH9uk"
+          target="_blank"
+          rel="noopener sponsored"
+          className="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold px-4 py-2 rounded-xl shadow ml-2"
+        >
+          Jämför nu
+        </a>
+      </div>
+
 
       {/* HERO */}
       <section className="max-w-3xl mx-auto py-16 md:py-24 px-4 text-center">
@@ -58,31 +94,84 @@ export default function Home() {
           </a>
         </div>
       </section>
+      { /* HERO END */}
+
+      {/* Trust signals */}
+      <div className="flex gap-2 mt-3 items-center justify-center">
+        <img src="/images/trustpilot-logo.png" alt="Trustpilot" className="h-5" />
+        <img src="/images/techradar-logo.png" alt="TechRadar" className="h-5" />
+        <span className="text-xs text-gray-500">Topprankad av experter</span>
+      </div>
+
 
       {/* NordVPN Long */}
       <section className="max-w-4xl mx-auto my-4 md:my-8 px-4 flex flex-col items-center">
-        <a href="https://go.nordvpn.net/SH9uk" target="_blank" rel="noopener sponsored">
+
+        {/* Desktop banner */}
+        <a
+          href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=127910&file_id=775"
+          target="_blank"
+          rel="noopener sponsored"
+          className="hidden md:block w-full"
+          style={{ maxWidth: "100%" }}
+        >
           <img
-            src="/images/nordvpn-header2025-desktop.png"
-            alt="NordVPN header"
+            src="https://media.go2speed.org/brand/files/nordvpn/15/nordvpn-header2025-desktop.png"
+            alt="NordVPN banner desktop"
             width={728}
             height={90}
-            className="hidden md:block mx-auto rounded-lg shadow-xl my-4"
+            className="mx-auto rounded-lg shadow-xl my-4"
             style={{ maxWidth: "100%", height: "auto" }}
-          />
-          <img
-            src="/images/nordvpn-header2025-mobile.png"
-            alt="NordVPN header mobile"
-            width={320}
-            height={167}
-            className="block md:hidden mx-auto rounded-lg shadow-xl my-4 max-w-xs"
-            style={{ maxWidth: "100%", height: "auto" }}
+            border={0}
           />
         </a>
-        <div className="mt-2 text-gray-700 dark:text-gray-300 text-xs">
-          <span className="font-bold text-blue-700 dark:text-blue-300">NordVPN</span> – Testvinnare 2025, 30 dagars garanti.
+        {/* Desktop tracking pixel */}
+        <img
+          src="https://go.nordvpn.net/aff_i?offer_id=15&file_id=775&aff_id=127910"
+          width={0}
+          height={0}
+          alt=""
+          style={{ position: "absolute", visibility: "hidden" }}
+          border={0}
+          className="hidden md:block"
+        />
+
+        {/* Mobile banner */}
+        <a
+          href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=127910&file_id=776"
+          target="_blank"
+          rel="noopener sponsored"
+          className="block md:hidden w-full"
+          style={{ maxWidth: "100%" }}
+        >
+          <img
+            src="https://media.go2speed.org/brand/files/nordvpn/15/nordvpn-header2025-mobile.png"
+            alt="NordVPN banner mobile"
+            width={320}
+            height={167}
+            className="mx-auto rounded-lg shadow-xl my-4 max-w-xs"
+            style={{ maxWidth: "100%", height: "auto" }}
+            border={0}
+          />
+        </a>
+        {/* Mobile tracking pixel */}
+        <img
+          src="https://go.nordvpn.net/aff_i?offer_id=15&file_id=776&aff_id=127910"
+          width={0}
+          height={0}
+          alt=""
+          style={{ position: "absolute", visibility: "hidden" }}
+          border={0}
+          className="block md:hidden"
+        />
+
+        {/* Text under banner */}
+        <div className="mt-2 text-gray-700 dark:text-gray-300 text-xs text-center">
+          <span className="font-bold text-blue-700 dark:text-blue-300">NordVPN</span>
+          <span> – Testvinnare 2025, 30 dagars garanti.</span>
         </div>
       </section>
+
 
       {/* COMPARETABLE */}
       <section id="top-vpn" className="overflow-x-auto max-w-4xl mx-auto my-16 px-2">
@@ -111,7 +200,7 @@ export default function Home() {
                     </span>
                   </div>
                 </td>
-                <td className="h-12 align-middle text-center">Från 35 kr</td>
+                <td className="h-12 align-middle text-center">35 kr</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center py-3 px-4">
@@ -143,7 +232,7 @@ export default function Home() {
                     <span className="font-semibold">ProtonVPN</span>
                   </div>
                 </td>
-                <td className="h-12 align-middle text-center">Från 34 kr</td>
+                <td className="h-12 align-middle text-center">34 kr</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center py-3 px-4">
@@ -170,7 +259,7 @@ export default function Home() {
                     <span className="font-semibold">Surfshark</span>
                   </div>
                 </td>
-                <td className="h-12 align-middle text-center">Från 23 kr</td>
+                <td className="h-12 align-middle text-center">23 kr</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center py-3 px-4">
@@ -189,11 +278,11 @@ export default function Home() {
                     <span className="font-semibold">ExpressVPN</span>
                   </div>
                 </td>
-                <td className="h-12 align-middle text-center">Från 39 kr</td>
+                <td className="h-12 align-middle text-center">39 kr</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center py-3 px-4">
-                  <span className="text-gray-400 font-bold">4.7</span> / 5
+                  <span className="text-gray-400 font-bold">4.5</span> / 5
                   <span className="ml-1">★</span>
                 </td>
                 <td>
@@ -205,7 +294,7 @@ export default function Home() {
         </div>
         { /* COMPARETABLE END */}
 
-        {/* <TopVPNAccordion /> */}
+        <TopVPNAccordion />
 
         {/* Proton Long */}
         <section className="max-w-4xl mx-auto my-8 md:my-12 px-4 flex flex-col items-center">
@@ -319,6 +408,8 @@ export default function Home() {
         </div>
       </section>
 
+
+
       {/* NordVPN affiliate banner */}
       <section className="max-w-4xl mx-auto my-8 md:my-12 px-4 flex flex-col items-center">
         <h2 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100">Så ser NordVPN ut</h2>
@@ -332,6 +423,6 @@ export default function Home() {
       <footer className="text-center text-xs text-gray-500 dark:text-gray-400 py-6">
         Denna sida innehåller affiliatelänkar. Det kostar inget extra för dig, men hjälper oss driva sidan. Tack för ditt stöd!
       </footer>
-    </main>
+    </main >
   );
 }
