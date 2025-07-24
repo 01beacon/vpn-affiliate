@@ -1,6 +1,29 @@
 import OpenAIWidget from "@/components/OpenAIWidget";
 import TopVPNAccordion from "@/components/TopVPNAccordion";
 
+export const metadata = {
+  title: "Bästa VPN-tjänster 2025 – Jämför NordVPN, ProtonVPN & fler",
+  description: "Skydda din integritet online! Jämför Sveriges bästa VPN-tjänster. Vi testar, recenserar och hjälper dig hitta bästa pris och erbjudande på NordVPN, ProtonVPN m.fl. 100% uppdaterad guide för 2025.",
+  keywords: [
+    "VPN", "bästa VPN", "jämför VPN", "NordVPN", "ProtonVPN",
+    "VPN test 2025", "VPN Sverige", "VPN erbjudande", "VPN rabatt"
+  ],
+  openGraph: {
+    title: "Bästa VPN-tjänster 2025 – Jämför NordVPN, ProtonVPN & fler",
+    description: "Skydda din integritet online! Jämför Sveriges bästa VPN-tjänster. Se vår stora testvinnare för 2025.",
+    url: "https://vpnkollen.vercel.app/",
+    images: [
+      {
+        url: "https://vpnkollen.vercel.app/images/vpn-hero-og.png",
+        width: 1200,
+        height: 628,
+        alt: "Bästa VPN-tjänster 2025",
+      },
+    ],
+    type: "website"
+  }
+};
+
 export default function Home() {
   return (
     <main className="bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-900 dark:to-gray-800 min-h-screen text-gray-800 dark:text-gray-100">
@@ -8,7 +31,7 @@ export default function Home() {
       <div className="hidden md:flex sticky top-0 z-50 bg-gradient-to-r from-blue-700 to-blue-800 text-white py-3 px-6 shadow-lg justify-between items-center">
         <span className="font-semibold text-lg">Jämför Sveriges bästa VPN-erbjudande</span>
         <a
-          href="https://go.nordvpn.net/SH9uk"
+          href="https://go.nordvpn.net/SH9v6"
           target="_blank"
           rel="noopener sponsored"
           className="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold px-5 py-2 rounded-xl shadow transition ml-6"
@@ -31,7 +54,7 @@ export default function Home() {
       <div className="fixed bottom-0 left-0 w-full z-50 md:hidden bg-gradient-to-r from-blue-700 to-blue-800 text-white p-3 shadow-lg flex justify-between items-center">
         <span className="font-semibold text-lg">Säkra NordVPN-erbjudandet</span>
         <a
-          href="https://go.nordvpn.net/SH9uk"
+          href="https://go.nordvpn.net/SH9v7"
           target="_blank"
           rel="noopener sponsored"
           className="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold px-4 py-2 rounded-xl shadow ml-2"
@@ -236,7 +259,7 @@ export default function Home() {
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center py-3 px-4">
-                  <span className="text-green-600 font-bold">4.8</span> / 5
+                  <span className="text-green-600 font-bold">4.7</span> / 5
                   <span className="ml-1">★</span>
                 </td>
                 <td>
@@ -263,7 +286,7 @@ export default function Home() {
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center hidden sm:table-cell">✅</td>
                 <td className="h-12 align-middle text-center py-3 px-4">
-                  <span className="text-gray-400 font-bold">4.8</span> / 5
+                  <span className="text-gray-400 font-bold">4.6</span> / 5
                   <span className="ml-1">★</span>
                 </td>
                 <td>

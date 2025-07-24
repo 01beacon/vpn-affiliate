@@ -21,7 +21,7 @@ const vpnList = [
     price: "Från 34 kr",
     freeTrial: "✅",
     streaming: "✅",
-    rating: "4.8",
+    rating: "4.7",
     ratingColor: "text-green-600",
     offerUrl: "https://go.nordvpn.net/SH9uk",
     offerLabel: "Till erbjudandet",
