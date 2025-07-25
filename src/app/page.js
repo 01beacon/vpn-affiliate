@@ -33,7 +33,7 @@ export default function Home() {
       <div className="hidden md:flex sticky top-0 z-50 bg-gradient-to-r from-blue-700 to-blue-800 text-white py-3 px-6 shadow-lg justify-between items-center">
         <span className="font-semibold text-lg">Jämför Sveriges bästa VPN-erbjudande</span>
         <a
-          href="https://go.nordvpn.net/SH9v6"
+          href="https://go.nordvpn.net/SH9vC"
           target="_blank"
           rel="noopener sponsored"
           className="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold px-5 py-2 rounded-xl shadow transition ml-6"
@@ -56,7 +56,7 @@ export default function Home() {
       <div className="fixed bottom-0 left-0 w-full z-50 md:hidden bg-gradient-to-r from-blue-700 to-blue-800 text-white p-3 shadow-lg flex justify-between items-center">
         <span className="font-semibold text-lg">Säkra NordVPN-erbjudandet</span>
         <a
-          href="https://go.nordvpn.net/SH9v7"
+          href="https://go.nordvpn.net/SH9vC"
           target="_blank"
           rel="noopener sponsored"
           className="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold px-4 py-2 rounded-xl shadow ml-2"
