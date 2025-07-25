@@ -1,3 +1,5 @@
+import NordVPNLookSectionWindows from "@/components/NordVPNLookSectionWindows";
+import NordVPNLookSectionAndroid from "@/components/NordVPNLookSectionAndroid";
 import OpenAIWidget from "@/components/OpenAIWidget";
 import TopVPNAccordion from "@/components/TopVPNAccordion";
 
@@ -431,16 +433,42 @@ export default function Home() {
         </div>
       </section>
 
+      <NordVPNLookSectionWindows />
+      <NordVPNLookSectionAndroid />
 
-
-      {/* NordVPN affiliate banner */}
-      <section className="max-w-4xl mx-auto my-8 md:my-12 px-4 flex flex-col items-center">
-        <h2 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100">Så ser NordVPN ut</h2>
-        <img src="/images/nordvpn-screenshot.png" alt="NordVPN app screenshot" className="mx-auto rounded-xl shadow mb-16" />
-        <a href="https://affiliate-nordvpn-link" target="_blank" rel="noopener">
-          <img src="/images/nordvpn-banner-728x90.png" alt="NordVPN banner" className="mx-auto" />
-        </a>
-      </section>
+      {/* <section className="max-w-3xl mx-auto my-12 px-4">
+        <h2 className="text-xl md:text-2xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100">Så installerar du NordVPN på 2 minuter</h2>
+        <ol className="space-y-6">
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col md:flex-row items-center gap-4">
+            <img src="/images/guide-step1.png" alt="Skapa konto NordVPN" className="w-32 h-auto rounded shadow" />
+            <div>
+              <b>1. Skapa ett konto</b>
+              <p className="text-gray-700 dark:text-gray-300">Registrera dig med din e-post på NordVPN:s webbplats. Det tar mindre än en minut.</p>
+            </div>
+          </li>
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col md:flex-row items-center gap-4">
+            <img src="/images/guide-step2.png" alt="Ladda ner NordVPN" className="w-32 h-auto rounded shadow" />
+            <div>
+              <b>2. Ladda ner appen</b>
+              <p className="text-gray-700 dark:text-gray-300">Ladda ner appen för din enhet – Windows, Mac, Android eller iOS.</p>
+            </div>
+          </li>
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col md:flex-row items-center gap-4">
+            <img src="/images/guide-step3.png" alt="Anslut till server" className="w-32 h-auto rounded shadow" />
+            <div>
+              <b>3. Välj server och anslut</b>
+              <p className="text-gray-700 dark:text-gray-300">Logga in, välj ett land – och klicka på “Anslut”. Du är nu skyddad!</p>
+            </div>
+          </li>
+          <li className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col md:flex-row items-center gap-4">
+            <img src="/images/guide-step4.png" alt="Netflix med VPN" className="w-32 h-auto rounded shadow" />
+            <div>
+              <b>4. Streama Netflix (eller surfa anonymt)</b>
+              <p className="text-gray-700 dark:text-gray-300">Nu kan du streama, ladda ner eller bara surfa helt anonymt – på alla enheter.</p>
+            </div>
+          </li>
+        </ol>
+      </section> */}
 
       {/* AFFILIATE DISCLAIMER */}
       <footer className="text-center text-xs text-gray-500 dark:text-gray-400 py-6">
