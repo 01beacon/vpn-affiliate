@@ -31,6 +31,16 @@ const screenshots = [
 
 export default function NordVPNLookSectionAndroid() {
   const [modalImg, setModalImg] = useState(null);
+  const [firstClickDone, setFirstClickDone] = useState(false);
+
+  // Hantera klick på screenshot: öppna affiliate första gången, alltid öppna modal
+  function handleScreenshotClick(i) {
+    if (!firstClickDone) {
+      window.open("https://go.nordvpn.net/SH9vD", "_blank", "noopener,noreferrer");
+      setFirstClickDone(true);
+    }
+    setModalImg(i);
+  }
 
   return (
     <section className="max-w-3xl mx-auto my-12 px-4">
@@ -41,7 +51,7 @@ export default function NordVPNLookSectionAndroid() {
         {screenshots.map((img, i) => (
           <div key={i}
             className="bg-white dark:bg-gray-800 rounded-xl shadow p-2 flex flex-col items-center cursor-pointer border border-gray-200 dark:border-gray-700 hover:scale-105 transition"
-            onClick={() => setModalImg(i)}
+            onClick={() => handleScreenshotClick(i)}
           >
             <img
               src={img.src}
@@ -58,9 +68,8 @@ export default function NordVPNLookSectionAndroid() {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center"
           style={{
-            background: "linear-gradient(135deg, #233554 80%, #344365 100%)", // Modern blå-grå bakgrund
-            backgroundColor: "rgba(30, 41, 59, 0.98)", // Fallback för mörkblå
-            // Byt till t.ex. "rgba(255,255,255,0.98)" för ljus halvgenomskinlig
+            background: "linear-gradient(135deg, #233554 80%, #344365 100%)",
+            backgroundColor: "rgba(30, 41, 59, 0.98)",
           }}
           onClick={() => setModalImg(null)}
         >
@@ -70,7 +79,7 @@ export default function NordVPNLookSectionAndroid() {
               e.stopPropagation();
               setModalImg(modalImg === 0 ? screenshots.length - 1 : modalImg - 1);
             }}
-            className="fixed left-2 top-1/2 -translate-y-1/2 z-50
+            className="fixed left-3 top-1/2 -translate-y-1/2 z-50
     flex items-center justify-center w-14 h-14 md:w-20 md:h-20
     text-4xl text-white bg-black/60 hover:bg-black/80 rounded-full
     focus:outline-none shadow-lg transition"
@@ -88,7 +97,7 @@ export default function NordVPNLookSectionAndroid() {
               e.stopPropagation();
               setModalImg(modalImg === screenshots.length - 1 ? 0 : modalImg + 1);
             }}
-            className="fixed right-2 top-1/2 -translate-y-1/2 z-50
+            className="fixed right-3 top-1/2 -translate-y-1/2 z-50
     flex items-center justify-center w-14 h-14 md:w-20 md:h-20
     text-4xl text-white bg-black/60 hover:bg-black/80 rounded-full
     focus:outline-none shadow-lg transition"
@@ -101,7 +110,12 @@ export default function NordVPNLookSectionAndroid() {
           </button>
 
           {/* Main image & close */}
-          <div className="relative flex flex-col items-center" onClick={e => e.stopPropagation()}>
+          <div
+            className="relative flex flex-col items-center justify-center"
+            style={{ minWidth: 320, maxWidth: '95vw' }}
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Close */}
             <button
               onClick={() => setModalImg(null)}
               className="absolute top-2 right-2 text-white text-3xl z-50 font-bold px-3 py-1 bg-black/60 rounded-full hover:bg-black/80 transition"
@@ -112,7 +126,7 @@ export default function NordVPNLookSectionAndroid() {
             <img
               src={screenshots[modalImg].src}
               alt={screenshots[modalImg].alt}
-              className="max-w-[95vw] max-h-[85vh] rounded-xl shadow-2xl border-4 border-white"
+              className="max-w-full max-h-[85vh] rounded-xl shadow-2xl border-4 border-white"
             />
             <div className="mt-3 text-white text-center text-sm">{screenshots[modalImg].caption}</div>
             <div className="mt-2 text-gray-300 text-xs">{modalImg + 1} / {screenshots.length}</div>
